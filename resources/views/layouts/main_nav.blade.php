@@ -6,10 +6,14 @@
 	</div>
 	<div>
 		<ul class="nav justify-content-end">
-			<li class="nav-item"><a class="nav-link" href="">Sign Up</a></li>
-			<li class="nav-item"><a class="nav-link" href="">Log In</a></li>
-			<li class="nav-item"><a class="nav-link" href="">My Itinerary</a></li>
-			<li class="nav-item"><a class="nav-link" href="">Log Out</a></li>
+			@if (Auth::guest())
+			<li class="nav-item"><a class="nav-link" href="{{ url('register') }}">Sign Up</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url('login') }}">Log In</a></li>
+			@else
+			<li class="nav-item"><a class="nav-link" href="">{{ Auth::user()->name }}'s Itinerary</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ route('logout') }}">Log Out</a></li>
+			@endif
 		</ul>
 	</div>
 </nav>
+

@@ -26,9 +26,12 @@ Route::get('/second_question', function() {
 	return view('second_question');
 });
 
-Route::get('/interests', 'InterestsController@index');
+// Route::get('/interests', 'InterestsController@index');
 
-Route::get('/interests/{interest}', 'InterestsController@show');
+// Route::get('/interests/{interest}', 'InterestsController@show');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/logout', 'Auth\LoginController@logout');
