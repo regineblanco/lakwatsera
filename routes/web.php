@@ -32,6 +32,10 @@ Route::get('/second_question', function() {
 
 Auth::routes();
 
+Route::get('/logout', 'Auth\LoginController@logout');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('/my_itineraries', 'ItineraryController@index');
+
+Route::get('/my_itineraries/{itinerary}', 'ItineraryController@view');

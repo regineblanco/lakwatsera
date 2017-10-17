@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('content')
+
 <div class="second_question">
 	<div class="container">
 		<div class="row">
@@ -48,3 +50,5 @@
 		</div><!-- close row second_question -->
 	</div><!-- close container second_question -->
 </div><!-- close second_quetion -->
+
+@endsection

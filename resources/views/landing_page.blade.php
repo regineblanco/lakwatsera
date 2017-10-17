@@ -5,13 +5,11 @@
 
 		<div class="full_page_section" id="landing_page">
 
-			@include('layouts.main_nav')
-
 			<!-- LANDING PAGE -->
 			<div class="landing_page_content">
 				<h3>Staying in Metro Manila for a few days? We've got you covered.</h3>
 				<h3>Experience the metro like a local.</h3>
-				<button class="btn btn-light">Let's Go!</button>
+				<a href="{{ url('/first_questions') }}"><button class="btn btn-light">Let's Go!</button></a>
 			</div>
 
 			<!-- NAV TWO -->

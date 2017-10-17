@@ -1,10 +1,12 @@
 @extends('layouts.master')
 
+@section('content')
+
 <div class="first_questions">
 	<div class="container">
-		<form class="form-group">
+		<form class="form-group" method="POST" action="/my_itineraries">
 			<p>First, let us know how long you'll be staying here.</p>
-			<select class="form-control">
+			<select class="form-control" name="days">
 		 		<option value="one">One</option>
 				<option value="two">Two</option>
 				<option value="three">Three</option>
@@ -15,7 +17,7 @@
 				<option value="more_than_a_week">More than a week</option>
 			</select>
 			<p>Next, where are you residing? You can choose whether you want to check out spots only within your city, in the surrounding area of your city, or anywhere in Metro Manila!</p>
-			<select class="form-control">
+			<select class="form-control" name="city">
 				<option value="manila">Manila</option>
 				<option value="caloocan">Caloocan</option>
 				<option value="lp">Las Piñas</option>
@@ -54,3 +56,5 @@
 		</form>
 	</div>
 </div>
+
+@endsection
