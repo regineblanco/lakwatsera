@@ -40,6 +40,6 @@ Route::get('/itineraries', 'ItineraryController@index');
 
 Route::get('/itineraries/create', 'ItineraryController@add');
 
-Route::get('/itineraries/{itinerary}', 'ItineraryController@view');
+Route::get('/itineraries/{id}', 'ItineraryController@view');
 
 Route::post('/itineraries', 'ItineraryController@store');

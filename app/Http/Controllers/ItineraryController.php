@@ -9,12 +9,17 @@ class ItineraryController extends Controller
 {
     public function index()
     {
-    	return view('itineraries.index');
+        $itineraries = Itinerary::latest()->get();
+
+    	return view('itineraries.index', compact('itineraries'));
     }
 
-    public function view()
+    public function view($id)
     {
-    	return view('itineraries.view');
+        $itinerary = Itinerary::find($id);
+        //or use route model  binding, should delete the whole line above, and add Itinerary model in argument
+
+    	return view('itineraries.view', compact('itinerary'));
     }
 
     public function add()

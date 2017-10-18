@@ -13,7 +13,12 @@
 			<label for="description">Description</label>
 			<textarea class="form-control" id="description" name="description"></textarea>
 		</div>
-		<button type="submit" class="btn btn-light">Submit</button>
+		<div class="form-group">
+			<button type="submit" class="btn btn-light">Submit</button>
+		</div>
+
+		@include('layouts.errors')
+
 	</form>
 </div>
 
