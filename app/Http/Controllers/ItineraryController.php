@@ -24,11 +24,29 @@ class ItineraryController extends Controller
 
     public function store()
     {
-    	$itinerary = new Itinerary;
-    	$itinerary->name = request('name');
-    	$itinerary->description = request('description');
+    	// $itinerary = new Itinerary;
+    	// $itinerary->name = request('name');
+    	// $itinerary->description = request('description');
 
-    	$itinerary->save();
+    	// $itinerary->save();
+
+    	//OR
+
+		// Itinerary::create([
+  //   		'name' => request('name'),
+  //   		'description' => request('description')
+  //   	]);
+
+    	// Laravel is vs. mass assigning
+
+		//OR
+
+        $this->validate(request(), [
+            'name' => 'required',
+            'description' => 'required'
+        ]);
+
+		Itinerary::create(request(['name', 'description']));
 
     	return redirect('/itineraries');
     }

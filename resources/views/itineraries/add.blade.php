@@ -13,7 +13,7 @@
 			<label for="description">Description</label>
 			<textarea class="form-control" id="description" name="description"></textarea>
 		</div>
-		<button type="submit" class="btn btn-default">Submit</button>
+		<button type="submit" class="btn btn-light">Submit</button>
 	</form>
 </div>
 

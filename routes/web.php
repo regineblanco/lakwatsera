@@ -19,11 +19,11 @@ Route::get('/', function () {
 });
 
 Route::get('/first_questions', function () {
-	return view('first_questions');
+	return view('questions.first');
 });
 
 Route::get('/second_question', function() {
-	return view('second_question');
+	return view('questions.second');
 });
 
 // Route::get('/interests', 'InterestsController@index');

@@ -2,6 +2,6 @@
 
 @section('content')
 
-<a href="{{ url('/itineraries/create') }}"><button>Add Itinerary</button></a>
+<a href="{{ url('/itineraries/create') }}"><button class="btn btn-light">Add Itinerary</button></a>
 
 @endsection
