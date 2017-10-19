@@ -2,7 +2,7 @@
 
 @section('content')
 
-{{ $itinerary->name }}
-{{ $itinerary->description }}
+<h4>{{ $itinerary->name }}</h4>
+<p>{{ $itinerary->description }}</p>
 
 @endsection

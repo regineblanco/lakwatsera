@@ -4,7 +4,8 @@
 
 <div class="first_questions">
 	<div class="container">
-		<form class="form-group">
+		<form class="form-group" method="POST" action="/itineraries">
+		{{ csrf_field() }}
 			<p>First, let us know how long you'll be staying here.</p>
 			<select class="form-control" name="days">
 		 		<option value="one">One</option>

@@ -51,4 +51,3 @@
 	</div><!-- close container second_question -->
 </div><!-- close second_quetion -->
 
-@endsection
