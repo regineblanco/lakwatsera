@@ -5,4 +5,5 @@ function arts() {
 	} else {
 		a.style.display = "none";
 	}
-} 
+}
+

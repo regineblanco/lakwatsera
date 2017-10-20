@@ -11,20 +11,20 @@
 |
 */
 
-use App\Interest;
+// use App\Interest;
 //reference it here so you can just use Interest instead of App\Interest
 
 Route::get('/', function () {
     return view('landing_page');
 });
 
-Route::get('/first_questions', function () {
-	return view('questions.first');
-});
+// Route::get('/first_questions', function () {
+// 	return view('questions.first');
+// });
 
-Route::get('/second_question', function() {
-	return view('questions.second');
-});
+// Route::get('/second_question', function() {
+// 	return view('questions.second');
+// });
 
 // Route::get('/interests', 'InterestsController@index');
 
@@ -36,7 +36,9 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/first_questions', 'UserController@store');
+Route::get('/questions/first', 'UserController@view');
+
+Route::post('/questions/first', 'UserController@store');
 
 Route::get('/itineraries', 'ItineraryController@index');
 
