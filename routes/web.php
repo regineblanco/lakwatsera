@@ -36,6 +36,8 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/first_questions', 'UserController@store');
+
 Route::get('/itineraries', 'ItineraryController@index');
 
 Route::get('/itineraries/create', 'ItineraryController@add');

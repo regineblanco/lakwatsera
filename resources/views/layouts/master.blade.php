@@ -17,9 +17,11 @@
 </head>
 <body>
 
-@include('layouts.main_nav')
+	@include('layouts.main_nav')
 
-@yield('content')
+	@yield('content')
+
+	<script src="{{ asset('js/myjavascript.js') }}"></script>
 
 </body>
 </html>

@@ -4,37 +4,38 @@
 
 <div class="first_questions">
 	<div class="container">
-		<form class="form-group" method="POST" action="/itineraries">
+		<form class="form-group" method="POST" action="{{ action('UserController@store') }}">
 		{{ csrf_field() }}
 			<p>First, let us know how long you'll be staying here.</p>
 			<select class="form-control" name="days">
-		 		<option value="one">One</option>
-				<option value="two">Two</option>
-				<option value="three">Three</option>
-				<option value="four">Four</option>
-				<option value="five">Five</option>
-				<option value="six">Six</option>
-				<option value="seven">Seven</option>
-				<option value="more_than_a_week">More than a week</option>
+		 		<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
 			</select>
 			<p>Next, where are you residing? You can choose whether you want to check out spots only within your city, in the surrounding area of your city, or anywhere in Metro Manila!</p>
 			<select class="form-control" name="city">
-				<option value="manila">Manila</option>
-				<option value="caloocan">Caloocan</option>
-				<option value="lp">Las Piñas</option>
-				<option value="makati">Makati</option>
-				<option value="malabon">Malabon</option>
-				<option value="manda">Mandaluyong</option>
-				<option value="marikina">Marikina</option>
-				<option value="muntinlupa">Muntinlupa</option>
-				<option value="navotas">Navotas</option>
-				<option value="pque">Parañaque</option>
-				<option value="pasay">Pasay</option>
-				<option value="pasig">Pasig</option>
-				<option value="qc">Quezon City</option>
-				<option value="sanjuan">San Juan</option>
-				<option value="taguig">Taguig</option>
-				<option value="valenzuela">Valenzuela</option>
+				@foreach ($cities as $city)
+					<option value="{{ $city->id }}">{{ $city->name }}</option>
+					<!-- <option value="caloocan">Caloocan</option>
+					<option value="lp">Las Piñas</option>
+					<option value="makati">Makati</option>
+					<option value="malabon">Malabon</option>
+					<option value="manda">Mandaluyong</option>
+					<option value="marikina">Marikina</option>
+					<option value="muntinlupa">Muntinlupa</option>
+					<option value="navotas">Navotas</option>
+					<option value="pque">Parañaque</option>
+					<option value="pasay">Pasay</option>
+					<option value="pasig">Pasig</option>
+					<option value="qc">Quezon City</option>
+					<option value="sanjuan">San Juan</option>
+					<option value="taguig">Taguig</option>
+					<option value="valenzuela">Valenzuela</option> -->
+				@endforeach
 			</select>
 			<div class="proximity_options">
 				<span class="form-check">
