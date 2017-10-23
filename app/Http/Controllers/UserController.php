@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function store(User $user, $city)
     {
-        $cities = City::all();
+      $cities = City::all();
     	$user->days = request('days');
     	$city->name = request('city');
     	// $user->proximity = request('proximity');
@@ -25,6 +25,6 @@ class UserController extends Controller
     	$user->save();
     	$city->save();
     	return view('questions.second', compact('user', 'city'));
-    	//[ 'user' => $user ] - can use this instead of compact 
+    	//[ 'user' => $user ] - can use this instead of compact
     }
 }

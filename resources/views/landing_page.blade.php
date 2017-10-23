@@ -9,7 +9,7 @@
 			<div class="landing_page_content">
 				<h3>Staying in Metro Manila for a few days? We've got you covered.</h3>
 				<h3>Experience the metro like a local.</h3>
-				<a href="{{ url('/first_questions') }}"><button class="btn btn-light">Let's Go!</button></a>
+				<a href="{{ url('/questions/first') }}"><button class="btn btn-light">Let's Go!</button></a>
 			</div>
 
 			<!-- NAV TWO -->
@@ -30,7 +30,7 @@
 						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 					</li>
 					<li>Tick your preferences.</li>
-					<li>We'll show you some spots you can check out! You'll love it, we promise.</li> 
+					<li>We'll show you some spots you can check out! You'll love it, we promise.</li>
 				</ol>
 			</div>
 		</div>
@@ -107,4 +107,3 @@
 
 	</div> <!-- close body container fluid -->
 @endsection
-
