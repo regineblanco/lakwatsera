@@ -4,8 +4,9 @@
 
 <div class="first_questions">
 	<div class="container">
-		<form class="form-group" method="POST" action="{{ action('UserController@store') }}">
-		{{ csrf_field() }}
+		<form class="form-group" method="POST" action="{{ route('user.update', Auth::id()) }}">
+			{{ method_field('PATCH') }}
+			{{ csrf_field() }}
 			<p>First, let us know how long you'll be staying here.</p>
 			<select class="form-control" name="days">
 		 		<option value="1">1</option>

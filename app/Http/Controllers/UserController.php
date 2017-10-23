@@ -15,6 +15,7 @@ class UserController extends Controller
         return view('questions.first', compact('cities'));
     }
 
+    // TODO: Delete
     public function store(User $user, $city)
     {
       $cities = City::all();
@@ -24,7 +25,18 @@ class UserController extends Controller
 
     	$user->save();
     	$city->save();
-    	return view('questions.second', compact('user', 'city'));
+    	return view('questions.second');
     	//[ 'user' => $user ] - can use this instead of compact
+    }
+
+
+    public function update($id)
+    {
+      $user = User::find($id);
+      $user->days = request('days');
+      $user->save();
+
+      // Now to go to the second set of questions
+      return view('questions.second');
     }
 }

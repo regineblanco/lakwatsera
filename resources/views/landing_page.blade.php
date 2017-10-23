@@ -9,7 +9,7 @@
 			<div class="landing_page_content">
 				<h3>Staying in Metro Manila for a few days? We've got you covered.</h3>
 				<h3>Experience the metro like a local.</h3>
-				<a href="{{ url('/questions/first') }}"><button class="btn btn-light">Let's Go!</button></a>
+				<a href="{{ route('questions.first') }}"><button class="btn btn-light">Let's Go!</button></a>
 			</div>
 
 			<!-- NAV TWO -->

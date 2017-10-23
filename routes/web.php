@@ -36,7 +36,15 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/questions/first', 'UserController@view');
+Route::get('/questions/first', [
+    'as' => 'questions.first',
+    'uses' => 'UserController@view'
+]);
+
+Route::patch('/users/{id}', [
+  'as' => 'user.update',
+  'uses' => 'UserController@update'
+]);
 
 Route::post('/questions/first', 'UserController@store');
 
