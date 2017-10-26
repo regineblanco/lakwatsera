@@ -10,10 +10,9 @@
 			<li class="nav-item"><a class="nav-link" href="{{ url('register') }}">Sign Up</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ url('login') }}">Log In</a></li>
 			@else
-			<li class="nav-item"><a class="nav-link" href="{{ url('itineraries') }}">My Itinerary</a></li>
+			<li class="nav-item"><a class="nav-link" href="{{ url('itineraries') }}">My {{ Auth::user()->city->name }} Itinerary</a></li>
 			<li class="nav-item"><a class="nav-link" href="{{ route('logout') }}">Log Out</a></li>
 			@endif
 		</ul>
 	</div>
 </nav>
-
