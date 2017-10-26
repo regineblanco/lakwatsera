@@ -21,21 +21,6 @@
 			<select class="form-control" name="city">
 				@foreach ($cities as $city)
 					<option value="{{ $city->id }}">{{ $city->name }}</option>
-					<!-- <option value="caloocan">Caloocan</option>
-					<option value="lp">Las Piñas</option>
-					<option value="makati">Makati</option>
-					<option value="malabon">Malabon</option>
-					<option value="manda">Mandaluyong</option>
-					<option value="marikina">Marikina</option>
-					<option value="muntinlupa">Muntinlupa</option>
-					<option value="navotas">Navotas</option>
-					<option value="pque">Parañaque</option>
-					<option value="pasay">Pasay</option>
-					<option value="pasig">Pasig</option>
-					<option value="qc">Quezon City</option>
-					<option value="sanjuan">San Juan</option>
-					<option value="taguig">Taguig</option>
-					<option value="valenzuela">Valenzuela</option> -->
 				@endforeach
 			</select>
 			<div class="proximity_options">
