@@ -18,7 +18,7 @@
 				<option value="7">7</option>
 			</select>
 			<p>Next, where are you residing? You can choose whether you want to check out spots only within your city, in the surrounding area of your city, or anywhere in Metro Manila!</p>
-			<select class="form-control" name="city">
+			<select class="form-control" name="city_id">
 				@foreach ($cities as $city)
 					<option value="{{ $city->id }}">{{ $city->name }}</option>
 				@endforeach

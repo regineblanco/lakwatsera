@@ -34,6 +34,7 @@ class UserController extends Controller
     {
       $user = User::find($id);
       $user->days = request('days');
+      $user->city_id = request('city_id');
       $user->save();
 
       // Now to go to the second set of questions

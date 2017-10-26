@@ -14,7 +14,7 @@ class AddCityIdToUsers extends Migration
     public function up()
     {
       Schema::table('users', function(Blueprint $table) {
-        $table->integer('city_id');
+        $table->integer('city_id')->nullable();
       });
     }
 
