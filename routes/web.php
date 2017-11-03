@@ -16,7 +16,7 @@
 
 Route::get('/', function () {
     return view('landing_page');
-});
+}); 
 
 // Route::get('/first_questions', function () {
 // 	return view('questions.first');
@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 // Route::get('/second_question', function() {
 // 	return view('questions.second');
-// });
+// }); 
 
 // Route::get('/interests', 'InterestsController@index');
 

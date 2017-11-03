@@ -18,9 +18,9 @@
 				<option value="7">7</option>
 			</select>
 			<p>Next, where are you residing? You can choose whether you want to check out spots only within your city, in the surrounding area of your city, or anywhere in Metro Manila!</p>
-			<select class="form-control" name="city">
+			<select class="form-control" name="city_id">
 				@foreach ($cities as $city)
-					<option value="{{ $city->id }}">{{ $city->name }}</option>
+					<option value="{{ $city->id }}">{{ $city->name }}</option> 
 					<!-- <option value="caloocan">Caloocan</option>
 					<option value="lp">Las Piñas</option>
 					<option value="makati">Makati</option>
@@ -37,21 +37,21 @@
 					<option value="taguig">Taguig</option>
 					<option value="valenzuela">Valenzuela</option> -->
 				@endforeach
-			</select>
+			</select>dif
 			<div class="proximity_options">
 				<span class="form-check">
 					<label class="form-check-label">
-						<input class="form-check-input" type="radio" name="proximity" value="within"> Show places only within my city
+						<input class="form-check-input" type="radio" name="proximity_preference" value="within"> Show places only within my city
 					</label>
 				</span>
 				<span class="form-check">
 					<label class="form-check-label">
-						<input class="form-check-input" type="radio" name="proximity" value="surrounding"> Show those surrounding and in close proximity to my city
+						<input class="form-check-input" type="radio" name="proximity_preference" value="surrounding"> Show those surrounding and in close proximity to my city
 					</label>
 				</span>
 				<span class="form-check">
 					<label class="form-check-label">
-						<input class="form-check-input" type="radio" name="proximity" value="everywhere"> Doesn't matter, I'm down to go wherever in the metro!
+						<input class="form-check-input" type="radio" name="proximity_preference" value="everywhere"> Doesn't matter, I'm down to go wherever in the metro!
 					</label>
 				</span>
 			</div>
