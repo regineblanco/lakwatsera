@@ -37,7 +37,7 @@
 					<option value="taguig">Taguig</option>
 					<option value="valenzuela">Valenzuela</option> -->
 				@endforeach
-			</select>dif
+			</select>
 			<div class="proximity_options">
 				<span class="form-check">
 					<label class="form-check-label">

@@ -7,7 +7,7 @@ class CategoriesAndInterestsTablesSeeder extends Seeder
     /**
      * Run the database seeds.
      *
-     * @return void
+     * @return void 
      */
     public function run()
     {
@@ -41,7 +41,7 @@ class CategoriesAndInterestsTablesSeeder extends Seeder
 			]);
 
 			foreach ($interests as $interest) {
-				// [Museums, Historical sites]
+				// ["Museums", "Historical sites"]
 				$created_interests = App\Interest::create([
 					'name' => $interest,
 					'category_id' => $created_category->id

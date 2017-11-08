@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +46,12 @@ Route::patch('/users/{id}', [
   'uses' => 'UserController@update'
 ]);
 
-Route::post('/questions/first', 'UserController@store');
+// Route::post('/questions/first', 'UserController@store');
+
+Route::get('/questions/second', [
+	'as' => 'questions.second',
+	'uses' => 'InterestController@view'
+]);
 
 Route::get('/itineraries', 'ItineraryController@index');
 
