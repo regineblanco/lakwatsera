@@ -7,7 +7,7 @@ class CategoriesAndInterestsTablesSeeder extends Seeder
     /**
      * Run the database seeds.
      *
-     * @return void 
+     * @return void
      */
     public function run()
     {
@@ -15,25 +15,51 @@ class CategoriesAndInterestsTablesSeeder extends Seeder
     		"Arts & Culture" => [
     			"Museums",
     			"Historical sites and monuments",
+                "Art galleries and exhibits",
+                "Churches",
+                "All of these!"
     		],
     		"Food" => [
     			"Pinoy cuisine",
-    			"Western cuisine"
+    			"Other cuisines",
+          "Food parks and markets",
+          "Wet and seafood markets",
+          "Coffee and dessert shops",
+          "All of these!"
     		],
     		"Shopping" => [
     			"Art markets and eccentric finds",
-    			"Themed markets"
+          "Flee markets and cheap finds",
+    			"Themed markets (flowers, pets, fruits)",
+          "High-end malls",
+          "All of these!"
     		],
     		"Music" => [
     			"Live acoustic",
-    			"Live jazz"
+    			"Live jazz",
+          "Live rock/alternative",
+          "Local indie music scene",
+          "Underground music",
+          "Stage musicals",
+          "Karaoke",
+          "All of these!"
     		],
     		"Recreation" => [
     			"Water sports",
+          "Escape rooms and games",
+          "Amusement parks",
+          "All of these!"
     		],
-    		"Nightlife" => []
+    		"Nightlife" => [
+          "Bars and speakeasies",
+          "Comedy bars",
+          "Fancy nightclubs",
+          "Underground clubs",
+          "Music festivals",
+          "All of the above!"
+        ]
     	];
-    
+
 		foreach ($categories as $category => $interests) {
 			// "Arts & Culture"
 			$created_category = App\Category::create([
@@ -47,7 +73,7 @@ class CategoriesAndInterestsTablesSeeder extends Seeder
 					'category_id' => $created_category->id
 				]);
 			}
-		}    
+		}
 
     }
 }

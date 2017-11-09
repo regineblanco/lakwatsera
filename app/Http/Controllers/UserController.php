@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User; 
+use App\User;
 use App\City;
+use App\Category;
+use App\Interest;
 
 class UserController extends Controller
 {
@@ -39,7 +41,13 @@ class UserController extends Controller
       $user->proximity_preference = request('proximity_preference');
       $user->save();
 
+      $categories = Category::all();
+      $interests = Interest::all();
+
       // Now to go to the second set of questions
-      return view('questions.second');
+      return view('questions.second',
+        ['categories' => $categories],
+        ['interests' => $interests]
+      );
     }
 }
