@@ -11,14 +11,14 @@ use App\Interest;
 class UserController extends Controller
 {
 
-    public function view()
+    public function viewFirstQ()
     {
         $cities = City::all();
 
         return view('questions.first', compact('cities'));
     }
 
-    // TODO: Delete
+    // TO DO: Delete
     // public function store(User $user, $city)
     // {
     //   $cities = City::all();
@@ -33,7 +33,7 @@ class UserController extends Controller
     // }
 
 
-    public function update($id)
+    public function viewSecondQ($id)
     {
       $user = User::find($id);
       $user->days = request('days');
@@ -49,5 +49,11 @@ class UserController extends Controller
         ['categories' => $categories],
         ['interests' => $interests]
       );
+    }
+
+    public function updateUserSettings($id)
+    {
+      // $user = User::find($id);
+      // $user->
     }
 }

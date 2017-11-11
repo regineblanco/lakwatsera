@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@
 
 Route::get('/', function () {
     return view('landing_page');
-}); 
+});
 
 // Route::get('/first_questions', function () {
 // 	return view('questions.first');
@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 // Route::get('/second_question', function() {
 // 	return view('questions.second');
-// }); 
+// });
 
 // Route::get('/interests', 'InterestsController@index');
 
@@ -38,20 +38,25 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/questions/first', [
     'as' => 'questions.first',
-    'uses' => 'UserController@view'
+    'uses' => 'UserController@viewFirstQ'
 ]);
 
-Route::patch('/users/{id}', [
-  'as' => 'user.update',
-  'uses' => 'UserController@update'
+Route::patch('/questions/second/{id}', [
+  'as' => 'update.first',
+  'uses' => 'UserController@viewSecondQ'
+]);
+
+Route::patch('/user/itinerary/{id}', [
+    'as' => 'update.second',
+    'uses' => 'UserController@updateUserSettings'
 ]);
 
 // Route::post('/questions/first', 'UserController@store');
 
-Route::get('/questions/second', [
-	'as' => 'questions.second',
-	'uses' => 'InterestController@view'
-]);
+// Route::patch('/users/{id}',
+//   'as' => 'user.update_2',
+//   'uses'=> 'UserController'
+// );
 
 Route::get('/itineraries', 'ItineraryController@index');
 

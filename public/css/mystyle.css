@@ -50,7 +50,7 @@ body, .container-fluid {
 #how_it_works li {
 	margin: 50px;
 	padding: 50px;
-	border: 1px solid black; 
+	border: 1px solid black;
 	border-radius: 50px;
 	list-style-position: inside;
 }
@@ -71,7 +71,7 @@ body, .container-fluid {
 
 .description p {
 	width: 80%;
-} 
+}
 
 .founders {
 	/*padding: 30px 40px 40px 0;*/
@@ -160,9 +160,9 @@ body, .container-fluid {
 }
 
 .interests_category {
-	position: fixed;
+	/*position: fixed;*/
 	width: 15%;
-	top: 30%;
+	/*top: 30%;*/
 }
 
 .interests_category li {

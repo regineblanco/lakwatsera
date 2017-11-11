@@ -19,6 +19,17 @@ class CreateInterestsTable extends Migration
             $table->integer('category_id');
             $table->timestamps();
         });
+
+        Schema::create('interest_user', function (Blueprint $table) {
+
+            $table->integer('interest_id')->unsigned()->index();
+            $table->foreign('interest_id')->references('id')->on('interests')->onDelete('cascade');
+
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->timestamps();
+        });
     }
 
     /**
@@ -29,5 +40,6 @@ class CreateInterestsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('interests');
+        Schema::drop('interest_user');
     }
 }

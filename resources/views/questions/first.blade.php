@@ -4,7 +4,7 @@
 
 <div class="first_questions">
 	<div class="container">
-		<form class="form-group" method="POST" action="{{ route('user.update', Auth::id()) }}">
+		<form class="form-group" method="POST" action="{{ route('update.first', Auth::id()) }}">
 			{{ method_field('PATCH') }}
 			{{ csrf_field() }}
 			<p>First, let us know how long you'll be staying here.</p>
@@ -20,22 +20,7 @@
 			<p>Next, where are you residing? You can choose whether you want to check out spots only within your city, in the surrounding area of your city, or anywhere in Metro Manila!</p>
 			<select class="form-control" name="city_id">
 				@foreach ($cities as $city)
-					<option value="{{ $city->id }}">{{ $city->name }}</option> 
-					<!-- <option value="caloocan">Caloocan</option>
-					<option value="lp">Las Piñas</option>
-					<option value="makati">Makati</option>
-					<option value="malabon">Malabon</option>
-					<option value="manda">Mandaluyong</option>
-					<option value="marikina">Marikina</option>
-					<option value="muntinlupa">Muntinlupa</option>
-					<option value="navotas">Navotas</option>
-					<option value="pque">Parañaque</option>
-					<option value="pasay">Pasay</option>
-					<option value="pasig">Pasig</option>
-					<option value="qc">Quezon City</option>
-					<option value="sanjuan">San Juan</option>
-					<option value="taguig">Taguig</option>
-					<option value="valenzuela">Valenzuela</option> -->
+					<option value="{{ $city->id }}">{{ $city->name }}</option>
 				@endforeach
 			</select>
 			<div class="proximity_options">

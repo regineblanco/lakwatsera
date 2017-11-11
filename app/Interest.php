@@ -12,5 +12,11 @@ class Interest extends Model
     public function category()
     {
     return $this->belongsTo('App\Category');
-	}	
+	  }
+
+    //Get the users with the given interest
+    public function users() //$interest->users
+    {
+      return $this->belongsToMany('App\User');
+    }
 }
