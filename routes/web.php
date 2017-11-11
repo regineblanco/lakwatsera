@@ -37,7 +37,7 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/questions/first', [
-    'as' => 'questions.first',
+    'as' => 'view.questions',
     'uses' => 'UserController@viewFirstQ'
 ]);
 
@@ -46,9 +46,9 @@ Route::patch('/questions/second/{id}', [
   'uses' => 'UserController@viewSecondQ'
 ]);
 
-Route::patch('/user/itinerary/{id}', [
+Route::patch('/user/itineraries/{id}', [
     'as' => 'update.second',
-    'uses' => 'UserController@updateUserSettings'
+    'uses' => 'UserController@completeUserSettings'
 ]);
 
 // Route::post('/questions/first', 'UserController@store');

@@ -51,9 +51,14 @@ class UserController extends Controller
       );
     }
 
-    public function updateUserSettings($id)
+    public function completeUserSettings($id)
     {
-      // $user = User::find($id);
-      // $user->
+      $user = User::find($id);
+      $user->interests = request('interests');
+      $user->interests()->attach('interest_id');
+
+      $user->save();
+
+      return view('landing_page');
     }
 }
