@@ -39,6 +39,7 @@ class UserController extends Controller
       $user->days = request('days');
       $user->city_id = request('city_id');
       $user->proximity_preference = request('proximity_preference');
+
       $user->save();
 
       $categories = Category::all();
@@ -55,7 +56,7 @@ class UserController extends Controller
     {
       $user = User::find($id);
       $user->interests = request('interests');
-      $user->interests()->attach('interest_id');
+      $user->interests()->attach();
 
       $user->save();
 

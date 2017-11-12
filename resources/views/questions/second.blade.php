@@ -6,7 +6,8 @@
 	<div class="container">
 		<div class="row">
 			<form method="POST" action="{{ route('update.second', Auth::id()) }}">
-
+			{{ method_field('PATCH') }}
+			{{ csrf_field() }}
 				<div class="col-xs-12 col-md-3 interests">
 					<div class="interests_category">
 						<ul class="d-flex flex-column">
