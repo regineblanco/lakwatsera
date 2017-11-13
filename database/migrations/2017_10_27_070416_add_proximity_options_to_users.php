@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddProximityPreferenceToUsers extends Migration
+class AddProximityOptionsToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class AddProximityPreferenceToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('proximity_preference')->nullable();
-        });    
+            $table->string('proximity_options')->nullable();
+        });
     }
 
     /**
@@ -26,7 +26,7 @@ class AddProximityPreferenceToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('proximity_preference');
+            $table->dropColumn('proximity_options');
         });
     }
 }

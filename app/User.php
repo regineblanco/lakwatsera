@@ -27,8 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function interests() //$user->interests
+    public function preferences() //$user->preferences
     {
-      return $this->belongsToMany('App\Interest');
+      return $this->belongsToMany('App\Preference');
     }
 }

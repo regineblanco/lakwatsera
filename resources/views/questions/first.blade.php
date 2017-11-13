@@ -26,17 +26,17 @@
 			<div class="proximity_options">
 				<span class="form-check">
 					<label class="form-check-label">
-						<input class="form-check-input" type="radio" name="proximity_preference" value="within"> Show places only within my city
+						<input class="form-check-input" type="radio" name="proximity_options" value="within"> Show places only within my city
 					</label>
 				</span>
 				<span class="form-check">
 					<label class="form-check-label">
-						<input class="form-check-input" type="radio" name="proximity_preference" value="surrounding"> Show those surrounding and in close proximity to my city
+						<input class="form-check-input" type="radio" name="proximity_options" value="surrounding"> Show those surrounding and in close proximity to my city
 					</label>
 				</span>
 				<span class="form-check">
 					<label class="form-check-label">
-						<input class="form-check-input" type="radio" name="proximity_preference" value="everywhere"> Doesn't matter, I'm down to go wherever in the metro!
+						<input class="form-check-input" type="radio" name="proximity_options" value="everywhere"> Doesn't matter, I'm down to go wherever in the metro!
 					</label>
 				</span>
 			</div>

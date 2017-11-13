@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CategoriesAndInterestsTablesSeeder extends Seeder
+class CategoriesAndPreferencesTablesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -60,16 +60,16 @@ class CategoriesAndInterestsTablesSeeder extends Seeder
         ]
     	];
 
-		foreach ($categories as $category => $interests) {
+		foreach ($categories as $category => $preferences) {
 			// "Arts & Culture"
 			$created_category = App\Category::create([
 				'name' => $category
 			]);
 
-			foreach ($interests as $interest) {
+			foreach ($preferences as $preference) {
 				// ["Museums", "Historical sites"]
-				$created_interests = App\Interest::create([
-					'name' => $interest,
+				$created_preferences = App\Preference::create([
+					'name' => $preference,
 					'category_id' => $created_category->id
 				]);
 			}

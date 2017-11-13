@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Interest extends Model
+class Preference extends Model
 {
     protected $guarded = [];
 
@@ -15,7 +15,7 @@ class Interest extends Model
 
     //Get the users with the given interest
 
-    public function users() //$interest->users
+    public function users() //$preference->users
     {
       return $this->belongsToMany('App\User');
     }

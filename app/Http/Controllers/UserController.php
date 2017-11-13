@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\City;
 use App\Category;
-use App\Interest;
+use App\Preference;
 
 class UserController extends Controller
 {
@@ -38,25 +38,25 @@ class UserController extends Controller
       $user = User::find($id);
       $user->days = request('days');
       $user->city_id = request('city_id');
-      $user->proximity_preference = request('proximity_preference');
+      $user->proximity_options = request('proximity_options');
 
       $user->save();
 
       $categories = Category::all();
-      $interests = Interest::all();
+      $preferences = Preference::all();
 
       // Now to go to the second set of questions
       return view('questions.second',
         ['categories' => $categories],
-        ['interests' => $interests]
+        ['preferences' => $preferences]
       );
     }
 
     public function completeUserSettings($id)
     {
       $user = User::find($id);
-      $user->interests = request('interests');
-      $user->interests()->attach();
+      $user->preferences = request('preferences');
+      $user->preferences()->attach();
 
       $user->save();
 

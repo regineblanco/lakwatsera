@@ -28,6 +28,6 @@ class CreatePreferencesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('interests');
+        Schema::dropIfExists('preferences');
     }
 }

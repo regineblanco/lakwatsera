@@ -44,7 +44,7 @@ Route::get('/questions/first', [
 Route::patch('/questions/second/{id}', [
   'as' => 'update.first',
   'uses' => 'UserController@viewSecondQ'
-]);
+]); 
 
 Route::patch('/user/itineraries/{id}', [
     'as' => 'update.second',

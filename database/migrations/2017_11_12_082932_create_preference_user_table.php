@@ -13,9 +13,9 @@ class CreatePreferenceUserTable extends Migration
      */
     public function up()
     {
-        Schema::table('preference_user', function (Blueprint $table) {
-          $table->integer('interest_id')->unsigned()->index();
-          $table->foreign('interest_id')->references('id')->on('interests')->onDelete('cascade');
+        Schema::create('preference_user', function (Blueprint $table) {
+          $table->integer('preference_id')->unsigned()->index();
+          $table->foreign('preference_id')->references('id')->on('preferences')->onDelete('cascade');
 
           $table->integer('user_id')->unsigned()->index();
           $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

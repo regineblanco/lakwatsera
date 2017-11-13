@@ -21,11 +21,11 @@
 	    	<div class="col-xs-12 col-md-9 interests_list">
 					<p>Let's get to know you more. Tell us your interests, so we can tailor our suggestions according to them.</p>
 					<div class="row">
-	          @foreach ($interests as $interests)
+	          @foreach ($preferences as $preference)
 							<div class="col-xs-12 col-md-6 interests_item">
 								<img src="{{ asset('img/manila.jpg') }}">
 	              <div>
-									<input type="checkbox" value="{{ $interests->id }}" name="interests" />{{ $interests->name }}
+									<input type="checkbox" value="{{ $preferences->id }}" name="preferences" />{{ $preferences->name }}
 								</div>
 							</div>
 	          @endforeach
@@ -35,4 +35,4 @@
 			</form>
     </div><!-- close row second_question -->
 	</div><!-- close container second_question -->
-</div><!-- close second_quetion -->
+</div><!-- close second_question -->

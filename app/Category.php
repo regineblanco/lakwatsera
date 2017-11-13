@@ -9,8 +9,8 @@ class Category extends Model
     protected $guarded = [];
 
 
-    public function interests()
+    public function preferences()
     {
-   	return $this->hasMany('App\Interest');
+   	return $this->hasMany('App\Preference');
    	}
 }
