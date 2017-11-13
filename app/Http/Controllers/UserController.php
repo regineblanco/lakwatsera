@@ -55,9 +55,10 @@ class UserController extends Controller
     public function completeUserSettings($id)
     {
       $user = User::find($id);
-      $user->preferences = request('preferences');
-      $user->preferences()->attach();
-
+      $preference_ids = request('preferences');
+      foreach ($preference_ids as $preference_id) {
+        $user->preferences()->attach($preference_id);
+      }
       $user->save();
 
       return view('landing_page');
