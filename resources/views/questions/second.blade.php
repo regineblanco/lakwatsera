@@ -25,7 +25,7 @@
 							<div class="col-xs-12 col-md-6 interests_item">
 								<img src="{{ asset('img/manila.jpg') }}">
 	              <div>
-									<input type="checkbox" value="{{ $preferences->id }}" name="preferences" />{{ $preferences->name }}
+									<input type="checkbox" value="{{ $preference->id }}" name="preferences" />{{ $preference->name }}
 								</div>
 							</div>
 	          @endforeach
