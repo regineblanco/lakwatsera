@@ -11,27 +11,26 @@ use App\Preference;
 class UserController extends Controller
 {
 
+  // TO DO: Delete
+  // public function store(User $user, $city)
+  // {
+  //  $cities = City::all();
+  // 	$user->days = request('days');
+  // 	$city->name = request('city');
+  // 	// $user->proximity = request('proximity');
+
+  // 	$user->save();
+  // 	$city->save();
+  // 	return view('questions.second');
+  // 	//[ 'user' => $user ] - can use this instead of compact
+  // }
+
     public function viewFirstQ()
     {
-        $cities = City::all();
+      $cities = City::all();
 
-        return view('questions.first', compact('cities'));
+      return view('questions.first', compact('cities'));
     }
-
-    // TO DO: Delete
-    // public function store(User $user, $city)
-    // {
-    //   $cities = City::all();
-    // 	$user->days = request('days');
-    // 	$city->name = request('city');
-    // 	// $user->proximity = request('proximity');
-
-    // 	$user->save();
-    // 	$city->save();
-    // 	return view('questions.second');
-    // 	//[ 'user' => $user ] - can use this instead of compact
-    // }
-
 
     public function viewSecondQ($id)
     {
@@ -59,8 +58,9 @@ class UserController extends Controller
       foreach ($preference_ids as $preference_id) {
         $user->preferences()->attach($preference_id);
       }
+
       $user->save();
 
-      return view('landing_page');
+      return view('itineraries.view');
     }
 }
