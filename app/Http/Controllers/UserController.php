@@ -7,6 +7,7 @@ use App\User;
 use App\City;
 use App\Category;
 use App\Preference;
+use App\Itinerary;
 
 class UserController extends Controller
 {
@@ -55,12 +56,17 @@ class UserController extends Controller
     {
       $user = User::find($id);
       $preference_ids = request('preferences');
+
       foreach ($preference_ids as $preference_id) {
         $user->preferences()->attach($preference_id);
       }
 
       $user->save();
 
-      return view('itineraries.index');
+      $itineraries = Itinerary::all();
+
+      return view('itineraries.index',
+        ['itineraries' => $itineraries]
+      );
     }
 }
