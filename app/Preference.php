@@ -13,10 +13,14 @@ class Preference extends Model
     return $this->belongsTo('App\Category');
 	  }
 
-    //Get the users with the given interest
-
+    //Get the users with the given preferences
     public function users() //$preference->users
     {
       return $this->belongsToMany('App\User');
+    }
+
+    public function itineraries()
+    {
+      return $this->hasMany('App\Itinerary');
     }
 }
