@@ -15,26 +15,14 @@
 //reference it here so you can just use Interest instead of App\Interest
 
 Route::get('/', function () {
-    return view('landing_page');
+    return view('home');
 });
 
-// Route::get('/first_questions', function () {
-// 	return view('questions.first');
-// });
-
-// Route::get('/second_question', function() {
-// 	return view('questions.second');
-// });
-
-// Route::get('/interests', 'InterestsController@index');
-
-// Route::get('/interests/{interest}', 'InterestsController@show');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
 Route::get('/logout', 'Auth\LoginController@logout');
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/questions/first', [
     'as' => 'view.questions',
@@ -44,9 +32,9 @@ Route::get('/questions/first', [
 Route::patch('/questions/second/{id}', [
   'as' => 'update.first',
   'uses' => 'UserController@viewSecondQ'
-]); 
+]);
 
-Route::patch('/user/itineraries/{id}', [
+Route::patch('/itineraries/{id}', [
     'as' => 'update.second',
     'uses' => 'UserController@completeUserSettings'
 ]);

@@ -61,6 +61,6 @@ class UserController extends Controller
 
       $user->save();
 
-      return view('itineraries.view');
+      return view('itineraries.index');
     }
 }

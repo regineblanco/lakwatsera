@@ -8,31 +8,33 @@
 			<form method="POST" action="{{ route('update.second', Auth::id()) }}">
 			{{ method_field('PATCH') }}
 			{{ csrf_field() }}
-				<div class="col-xs-12 col-md-3 interests">
-					<div class="interests_category">
+				<div class="col-xs-12 col-md-3 preferences">
+					<div class="preferences_category">
 						<ul class="d-flex flex-column">
 	  					@foreach ($categories as $category)
 	  						<li><a href="">{{ $category->name }}</a></li>
 	  					@endforeach
 						</ul>
-					</div><!-- close interests_category -->
-				</div><!-- close interests -->
+					</div><!-- close preferences_category -->
+				</div><!-- close preferences -->
 
-	    	<div class="col-xs-12 col-md-9 interests_list">
+	    	<div class="col-xs-12 col-md-9 preferences_list">
 					<p>Let's get to know you more. Tell us your interests, so we can tailor our suggestions according to them.</p>
 					<div class="row">
 	          @foreach ($preferences as $preference)
-							<div class="col-xs-12 col-md-6 interests_item">
+							<div class="col-xs-12 col-md-6 preferences_item">
 								<img src="{{ asset('img/manila.jpg') }}">
 	              <div>
 									<input type="checkbox" value="{{ $preference->id }}" name="preferences[]" />{{ $preference->name }}
 								</div>
 							</div>
 	          @endforeach
-					</div><!-- close row interests_item -->
-				</div><!-- close interests_list -->
+					</div><!-- close row preferences_item -->
+				</div><!-- close preferences_list -->
 				<button type="submit" class="btn btn-light">I'm Done!</button>
 			</form>
     </div><!-- close row second_question -->
 	</div><!-- close container second_question -->
 </div><!-- close second_question -->
+
+@endsection

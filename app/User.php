@@ -31,4 +31,9 @@ class User extends Authenticatable
     {
       return $this->belongsToMany('App\Preference');
     }
+
+    public function itineraries()
+    {
+      return $this->belongsToMany(App\Itinerary);
+    }
 }

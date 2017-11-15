@@ -153,25 +153,25 @@ body, .container-fluid {
 	text-align: center;
 }
 
-/*INTERESTS*/
+/*PREFERENCES*/
 
 .second_question {
 	padding: 10vh 0;
 }
 
-.interests_category {
+.preferences_category {
 	/*position: fixed;*/
 	width: 15%;
 	/*top: 30%;*/
 }
 
-.interests_category li {
+.preferences_category li {
 	list-style: none;
 	border-bottom: 1px solid grey;
 	padding: 10px 0;
 }
 
-.interests_item img {
+.preferences_item img {
 	height: 250px;
 	padding: 20px;
 	border-radius: 50px;
