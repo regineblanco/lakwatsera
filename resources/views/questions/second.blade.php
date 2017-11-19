@@ -22,12 +22,13 @@
 					<p>Let's get to know you more. Tell us your interests, so we can tailor our suggestions according to them.</p>
 					<div class="row">
 	          @foreach ($preferences as $preference)
-							<div class="col-xs-12 col-md-6 preferences_item">
-								<img src="{{ asset('img/manila.jpg') }}">
-	              <div>
-									<input type="checkbox" value="{{ $preference->id }}" name="preferences[]" />{{ $preference->name }}
+							<label>
+								<div class="col-xs-12 col-md-6 preferences_item">
+									<div id="checkbox_text">
+										<input type="checkbox" value="{{ $preference->id }}" name="preferences[]" />{{ $preference->name }}
+									</div>
 								</div>
-							</div>
+							</label>
 	          @endforeach
 					</div><!-- close row preferences_item -->
 				</div><!-- close preferences_list -->

@@ -171,8 +171,18 @@ body, .container-fluid {
 	padding: 10px 0;
 }
 
-.preferences_item img {
+.preferences_item {
+	background: url("/img/manila.jpg");
 	height: 250px;
+	width: 250px;
 	padding: 20px;
 	border-radius: 50px;
+	position: relative;
+}
+
+.preferences_item #checkbox_text {
+	position: absolute;
+	top: 45%;
+	left: 20%;
+	overflow: hidden;
 }
