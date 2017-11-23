@@ -39,17 +39,10 @@ Route::patch('/itineraries/{id}', [
     'uses' => 'UserController@completeUserSettings'
 ]);
 
-// Route::post('/questions/first', 'UserController@store');
-
-// Route::patch('/users/{id}',
-//   'as' => 'user.update_2',
-//   'uses'=> 'UserController'
-// );
-
 Route::get('/itineraries', 'ItineraryController@index');
 
-Route::get('/itineraries/create', 'ItineraryController@add');
-
-Route::get('/itineraries/{id}', 'ItineraryController@view');
-
-Route::post('/itineraries', 'ItineraryController@store');
+// Route::get('/itineraries/create', 'ItineraryController@add');
+//
+// Route::get('/itineraries/{id}', 'ItineraryController@view');
+//
+// Route::post('/itineraries', 'ItineraryController@store');

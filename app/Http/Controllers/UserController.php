@@ -63,7 +63,8 @@ class UserController extends Controller
 
       $user->save();
 
-      $itineraries = Itinerary::all();
+      // $preferences = $user->preferences()->get();
+      $itineraries = $user->itineraries();
 
       return view('itineraries.index',
         ['itineraries' => $itineraries]

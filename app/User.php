@@ -34,6 +34,19 @@ class User extends Authenticatable
 
     public function itineraries() //$user->itineraries
     {
-      return $this->belongsToMany('App\Itinerary');
+      $preferences = $this->preferences()->get();
+
+      $itineraries = array();
+
+      foreach ($preferences as $preference) {
+        $itineraries[] = $preference->itineraries()->get();
+        // array_push($itineraries, $preference_itineraries);
+
+        // $preference_itineraries = $preference->itineraries()->get();
+        // $itineraries = array_merge($itineraries, (array)$preference_itineraries);
+        //we want to merge the two arrays instead of putting one array into another
+      }
+
+      return $itineraries;
     }
 }

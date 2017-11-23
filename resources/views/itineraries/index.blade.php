@@ -18,7 +18,6 @@
 
 
   <div class="itinerary tab-content row">
-
     @foreach ($itineraries as $itinerary)
     <div class="tab-pane active col-xs-12 col-sm-6" id="day1" role="tabpanel">
       <img src="">

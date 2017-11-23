@@ -186,3 +186,15 @@ body, .container-fluid {
 	left: 20%;
 	overflow: hidden;
 }
+
+/*input[type="checkbox"] {
+	display: none;
+}*/
+
+/*#checkbox_preference img {
+	height: 250px;
+	width: 250px;
+	padding: 20px;
+	border-radius: 50px;
+	display: none;
+}*/
