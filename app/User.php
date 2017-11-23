@@ -39,7 +39,7 @@ class User extends Authenticatable
       $itineraries = array();
 
       foreach ($preferences as $preference) {
-        $itineraries[] = $preference->itineraries()->get();
+        $itineraries = $preference->itineraries()->get();
         // array_push($itineraries, $preference_itineraries);
 
         // $preference_itineraries = $preference->itineraries()->get();
