@@ -39,6 +39,11 @@ Route::patch('/itineraries/{id}', [
     'uses' => 'UserController@completeUserSettings'
 ]);
 
+Route::get('/itineraries/{user_id}/details/{itinerary_id}', [
+    'as' => 'itineraries.details',
+    'uses' => 'ItineraryController@showItineraryDetails'
+]);
+
 Route::get('/itineraries', 'ItineraryController@index');
 
 // Route::get('/itineraries/create', 'ItineraryController@add');

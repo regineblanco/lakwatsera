@@ -43,7 +43,7 @@ class User extends Authenticatable
         // array_push($itineraries, $preference_itineraries);
 
         $preference_itineraries = $preference->itineraries()->get();
-        $itineraries = array_merge($itineraries, (array)$preference_itineraries);    
+        $itineraries = array_merge($itineraries, $preference_itineraries->all());    
         //we want to merge the two arrays instead of putting one array into another
       }
 
