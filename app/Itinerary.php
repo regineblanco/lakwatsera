@@ -13,6 +13,7 @@ class Itinerary extends Model
 
     public function users() //itinerary->users
     {
-      return $this->belongsToMany('App\User');
+      // return $this->belongsToMany('App\User');
+      return $this->preference()->users();
     }
 }
